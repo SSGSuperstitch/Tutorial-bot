@@ -4,6 +4,8 @@ const {
     prefix,
 } = require('./config.json')
 const fs = require('fs')
+const got = require('got')
+
 const client = new Discord.Client()
 
 client.commands = new Discord.Collection();
@@ -32,6 +34,11 @@ client.on("message", message =>{
   if (command === 'socials'){
       client.commands.get('socials').execute(message, args, Discord)
   }
+
+  if (command === 'meme'){
+    client.commands.get('meme').execute(message, args, got, Discord)
+}
+
 
 })
 
