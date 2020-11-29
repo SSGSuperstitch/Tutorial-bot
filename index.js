@@ -29,6 +29,9 @@ client.on("message", message =>{
       client.commands.get('ping').execute(message, args)
   }
 
+  if (command === 'socials'){
+      client.commands.get('socials').execute(message, args, Discord)
+  }
 
 })
 
