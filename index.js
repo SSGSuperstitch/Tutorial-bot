@@ -5,7 +5,7 @@ const {
 } = require('./config.json')
 const fs = require('fs')
 const got = require('got')
-
+const welcome = require('./welcome')
 const client = new Discord.Client()
 
 client.commands = new Discord.Collection();
@@ -17,7 +17,9 @@ for(const file of commandFiles){
 }
 
 client.once('ready', () => {
+    welcome(client)
     console.log(`Logged om as ${client.user.tag}`)
+    
 });
 
 
