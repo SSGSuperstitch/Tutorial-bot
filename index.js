@@ -39,6 +39,10 @@ client.on("message", message =>{
     client.commands.get('meme').execute(message, args, got, Discord)
 }
 
+    if (command === 'purge'){
+        client.commands.get('purge').execute(message, args)
+    }
+
 
 })
 
