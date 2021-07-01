@@ -61,6 +61,15 @@ client.on("message", message =>{
         client.commands.get('help').execute(message, args, Discord)
     }
 
+    
+if(command === 'sim-join'){
+    client.commands.get('sim-join').execute(message, args, client)
+}
+
+if(command === 'sim-leave'){
+    client.commands.get('sim-leave').execute(message, args, client)
+}
+
 })
 
 
