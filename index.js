@@ -55,6 +55,10 @@ client.on("message", message =>{
         client.commands.get('ban').execute(message, args, client)
     }
 
+    if(command === 'help'){
+        client.commands.get('help').execute(message, args, Discord)
+    }
+
 })
 
 
