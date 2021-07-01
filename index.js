@@ -43,6 +43,17 @@ client.on("message", message =>{
         client.commands.get('purge').execute(message, args)
     }
 
+    if (command === 'warn'){
+        client.commands.get('warn').execute(message, args, Discord)
+    }
+   
+    if (command === 'kick'){
+        client.commands.get('kick').execute(message, args)
+    }
+    
+    if (command === 'ban'){
+        client.commands.get('ban').execute(message, args, client)
+    }
 
 })
 
