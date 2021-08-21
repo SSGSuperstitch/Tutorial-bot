@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const {
     token,
+<<<<<<< Updated upstream
     prefix,
 } = require('./config.json')
 const fs = require('fs')
@@ -40,11 +41,13 @@ client.on("message", message =>{
 }
 
 
+=======
+} = require('./config copy.json')
+const client = new Discord.Client()
+client.commands = new Discord.Collection()
+client.events = new Discord.Collection()
+let handlers = ['command_handler', 'event_handler'].forEach(handler => {
+    require(`./hadlers/${handler}`)(client, Discord)
+>>>>>>> Stashed changes
 })
-
-
-
-
-
-
 client.login(token)
